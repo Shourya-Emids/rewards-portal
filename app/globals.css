@@ -1,0 +1,131 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+/*
+ Design tokens — single source of truth for the dashboard palette.
+ Pink-blue scheme: soft blue base and navy text with vivid pink accents.
+*/
+:root {
+  color-scheme: light;
+
+  /* Typography */
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --spacing: 0.25rem;
+  --default-font-family: var(--font-sans);
+  --default-mono-font-family: var(--font-mono);
+
+  /* Layout */
+  --page-inset: clamp(16px, 3vw, 44px);
+
+  /* Backgrounds */
+  --color-page: #ffffff;
+  --color-surface: rgba(255, 255, 255, 0.92);
+  /* Yellow highlight/border accent */
+  --color-highlight: #f6d45c;
+  --gradient-yellow: linear-gradient(180deg, #f5de74 0%, #fcefb4 100%);
+  --gradient-bluepink: linear-gradient(105deg, #e7f0fc 0%, #fdeaf2 100%);
+  --gradient-pinkblue: linear-gradient(105deg, #fdeaf2 0%, #e7f0fc 100%);
+  --color-callout: rgba(255, 255, 255, 0.93);
+  --color-tint: #e4edfa;
+
+  /* Brand accent */
+  --color-accent: #4a7be0;
+  --color-accent-strong: #1e4a91;
+  /* Gradient start for the progress bars — the pink end of the duo. */
+  --color-accent-soft: #f6b9d0;
+
+  /* Pink hints */
+  --color-pink: #ee6fa5;
+  --color-pink-tint: #fbe3ec;
+  --color-pink-ink: #c2447c;
+
+  /* Text — near-black for visibility on tinted surfaces */
+  --color-ink: #1a1a1a;
+  --color-title: #1a1a1a;
+  --color-heading: #1a1a1a;
+  --color-dark: #1a1a1a;
+  --color-nav-active: #111111;
+  --color-muted: #4d4d54;
+  --color-steel: #565660;
+  --color-slate: #5a5a62;
+  --color-haze: #5e5e66;
+  --color-axis: #66666e;
+  --color-icon-muted: #6a6a72;
+  --color-neutral: #3e3e45;
+  --color-faint: #75757d;
+
+  /* Lines and surfaces */
+  --color-track: #e2eaf5;
+  --color-grid: #e1e9f4;
+  --color-pale-line: #c9d9ee;
+  --color-dotted-line: #c4d3e8;
+  --color-divider: #dce5f1;
+  --color-mini-pale: #d5deef;
+  --color-chart-line: #2b3c60;
+
+  /* Shadows */
+  --shadow-card: 0 6px 18px rgba(36, 52, 79, 0.05);
+  --shadow-callout: 0 2px 8px rgba(36, 52, 79, 0.09);
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .fade-up {
+    animation: fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .d1 {
+    animation-delay: 60ms;
+  }
+
+  .d2 {
+    animation-delay: 120ms;
+  }
+
+  .d3 {
+    animation-delay: 180ms;
+  }
+
+  .d4 {
+    animation-delay: 240ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}

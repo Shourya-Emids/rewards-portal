@@ -1,0 +1,158 @@
+.tile {
+  background: var(--gradient-yellow);
+  color: var(--color-ink);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+  padding: 15px 15px 10px;
+}
+
+.tileHeading {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--color-ink);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.headingIcon {
+  color: var(--color-icon-muted);
+}
+
+.pushRight {
+  margin-left: auto;
+  color: var(--color-icon-muted);
+}
+
+.progressPanel {
+  margin-top: 12px;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 10px;
+  padding: 10px 12px 12px;
+}
+
+.panelHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.panelTitle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+
+.panelPoints {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-nav-active);
+  font-variant-numeric: tabular-nums;
+}
+
+.panelPoints small {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--color-slate);
+}
+
+.track {
+  height: 8px;
+  border-radius: 5px;
+  background: rgba(26, 16, 35, 0.1);
+  overflow: hidden;
+}
+
+.track span {
+  display: block;
+  height: 100%;
+  border-radius: 5px;
+  background: linear-gradient(90deg, var(--color-accent-soft), var(--color-accent));
+  transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.leaderboard {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 6px;
+  border-top: 1px solid rgba(26, 16, 35, 0.08);
+}
+
+.rank {
+  width: 16px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-neutral);
+  font-variant-numeric: tabular-nums;
+}
+
+.topRank {
+  color: var(--color-pink-ink);
+}
+
+.rowAvatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.rowName {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-nav-active);
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.youChip {
+  background: var(--color-pink-tint);
+  color: var(--color-pink-ink);
+  font-size: 9px;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 1px 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.rowPoints {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-nav-active);
+  font-variant-numeric: tabular-nums;
+}
+
+.rowPoints small {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--color-slate);
+}
+
+.currentUserRow {
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 8px;
+  border-top-color: transparent;
+}
+
+@media (max-width: 720px) {
+  .tile {
+    padding: 13px 14px 10px;
+  }
+}

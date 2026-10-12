@@ -1,0 +1,429 @@
+.page {
+  padding: 22px var(--page-inset) 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pageHeader {
+  margin-bottom: 16px;
+}
+
+.pageHeader h1 {
+  margin: 0 0 4px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  color: var(--color-title);
+}
+
+.pageHeader p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-steel);
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 260px));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.statTile {
+  background: var(--gradient-bluepink);
+  border: 1px solid var(--color-highlight);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+  padding: 13px 16px;
+}
+
+.statTile:nth-child(even) {
+  background: var(--gradient-pinkblue);
+}
+
+.statLabel {
+  margin: 0 0 2px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-axis);
+}
+
+.statValue {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  color: var(--color-heading);
+  font-variant-numeric: tabular-nums;
+}
+
+.tabRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tabBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--color-divider);
+  background: var(--color-surface);
+  color: var(--color-neutral);
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.tabBtn:hover {
+  color: var(--color-ink);
+}
+
+.tabActive {
+  background: var(--color-accent-strong);
+  border-color: var(--color-accent-strong);
+  color: #fff;
+}
+
+.tabBadge {
+  background: var(--color-pink);
+  color: #fff;
+  font-size: 10px;
+  border-radius: 999px;
+  padding: 1px 7px;
+  font-variant-numeric: tabular-nums;
+}
+
+.panel {
+  background: var(--gradient-bluepink);
+  border: 1px solid var(--color-highlight);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+  padding: 16px 18px 18px;
+}
+
+.approvalsWrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 14px;
+}
+
+.emptyNote {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--color-steel);
+}
+
+/* Org tree */
+.orgTree,
+.orgChildren {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.orgChildren {
+  margin-left: 8px;
+  padding-left: 15px;
+  border-left: 1px dashed var(--color-divider);
+}
+
+.orgBranch {
+  margin: 0 0 6px;
+}
+
+.orgBranch:last-child {
+  margin-bottom: 0;
+}
+
+.orgBranch .orgChildren {
+  margin-top: 6px;
+}
+
+.orgNode {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid var(--color-divider);
+  border-radius: 8px;
+  padding: 4px 10px 4px 4px;
+}
+
+.orgYou {
+  border: 1px solid var(--color-highlight);
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(36, 52, 79, 0.08);
+}
+
+.orgToggle,
+.orgToggleSpacer {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orgToggle {
+  border: 0;
+  background: transparent;
+  color: var(--color-neutral);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.orgToggle:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-ink);
+}
+
+.orgToggle svg {
+  transition: transform 0.2s ease;
+}
+
+.orgToggle.toggleOpen svg {
+  transform: rotate(90deg);
+}
+
+.orgAvatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.orgInfo {
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+
+.orgName {
+  margin: 0;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--color-nav-active);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.youChip {
+  background: var(--color-pink-tint);
+  color: var(--color-pink-ink);
+  font-size: 8px;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 1px 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.orgRole {
+  font-size: 10px;
+  color: var(--color-axis);
+}
+
+.orgCount {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--color-accent);
+  background: var(--color-tint);
+  border-radius: 999px;
+  padding: 1px 6px;
+}
+
+/* Approvals */
+.approvalCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-highlight);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+  padding: 14px 16px;
+}
+.approvalHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.approvalAvatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.approvalLine {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-steel);
+}
+
+.approvalLine strong {
+  color: var(--color-nav-active);
+}
+
+.approvalMeta {
+  font-size: 10.5px;
+  color: var(--color-axis);
+}
+
+.approvalPoints {
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.approvalTarget {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--color-tint);
+  border-radius: 9px;
+  padding: 7px 10px;
+  margin-bottom: 8px;
+}
+
+.targetAvatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--color-accent);
+}
+
+.targetName {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-nav-active);
+}
+
+.targetChip {
+  margin-left: auto;
+  background: var(--color-pink-tint);
+  color: var(--color-pink-ink);
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 2px 8px;
+}
+
+.approvalNote {
+  margin: 0 0 12px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--color-heading);
+}
+
+.approvalActions {
+  display: flex;
+  gap: 8px;
+}
+
+.approveBtn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 0;
+  background: var(--color-accent-strong);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.rejectBtn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid var(--color-divider);
+  background: transparent;
+  color: var(--color-neutral);
+  font-size: 12.5px;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.rejectBtn:hover {
+  color: var(--color-ink);
+  border-color: var(--color-axis);
+}
+
+.waitingChip {
+  display: inline-block;
+  background: var(--color-tint);
+  color: var(--color-accent);
+  font-size: 10.5px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+
+.restrictedPanel {
+  max-width: 520px;
+  margin: 30px auto 0;
+  padding: 26px 26px 24px;
+  text-align: center;
+}
+
+.restrictedTitle {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: var(--color-title);
+}
+
+.restrictedText {
+  margin: 0 0 16px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--color-steel);
+}
+
+.restrictedActions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.restrictedActions .rejectBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+@media (max-width: 720px) {
+  .statGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .approvalsWrap {
+    grid-template-columns: 1fr;
+  }
+}

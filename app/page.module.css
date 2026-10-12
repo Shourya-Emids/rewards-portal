@@ -1,0 +1,22 @@
+.page {
+  padding: 0 var(--page-inset) 24px;
+}
+
+.summaryGrid {
+  margin: 14px 0 0;
+  display: grid;
+  grid-template-columns: 0.83fr 1.27fr;
+  gap: 16px;
+}
+
+@media (max-width: 1100px) {
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .summaryGrid {
+    gap: 12px;
+  }
+}

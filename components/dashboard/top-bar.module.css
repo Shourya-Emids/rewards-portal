@@ -1,0 +1,134 @@
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.brandMark {
+  color: var(--color-accent);
+  width: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav a {
+  border: 0;
+  background: transparent;
+  color: var(--color-neutral);
+  letter-spacing: 0.5px;
+  font-size: 13px;
+  padding: 8px 8px 10px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.nav a.active {
+  color: var(--color-nav-active);
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--color-dark);
+}
+
+.personaChip {
+  font-size: 10.5px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 4px 10px;
+  letter-spacing: 0.3px;
+}
+
+.chipManager {
+  background: var(--color-pink-tint);
+  color: var(--color-pink-ink);
+}
+
+.chipEmployee {
+  background: var(--color-tint);
+  color: var(--color-accent);
+}
+
+.logoutBtn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--color-divider);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-neutral);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.logoutBtn:hover {
+  background: var(--color-tint);
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.iconBtn {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-tint);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.iconBtn:hover {
+  background: #d3e2fb;
+}
+
+.actions img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  object-position: center bottom;
+  border-radius: 8px;
+  background: var(--color-accent);
+}
+
+@media (max-width: 720px) {
+  .topBar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav {
+    order: 3;
+    width: 100%;
+    overflow: auto;
+    gap: 4px;
+  }
+
+  .nav a {
+    font-size: 11px;
+    padding: 7px 7px 9px;
+  }
+
+  .actions {
+    gap: 10px;
+  }
+
+  .actions img {
+    width: 32px;
+    height: 32px;
+  }
+}

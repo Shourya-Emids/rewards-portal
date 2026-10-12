@@ -1,0 +1,72 @@
+.reminderTile {
+  margin: 16px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--gradient-bluepink);
+  border: 1px solid var(--color-highlight);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+  padding: 14px 18px;
+}
+
+.reminderIcon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--color-pink-ink);
+  box-shadow: 0 4px 10px rgba(36, 52, 79, 0.1);
+}
+
+.reminderCopy {
+  min-width: 0;
+}
+
+.reminderTitle {
+  margin: 0 0 2px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.reminderText {
+  margin: 0;
+  font-size: 12px;
+  color: var(--color-neutral);
+  line-height: 1.5;
+}
+
+.reminderCta {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--color-accent-strong);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 9px 14px;
+  text-decoration: none;
+}
+
+.reminderCta:hover {
+  filter: brightness(0.94);
+}
+
+@media (max-width: 720px) {
+  .reminderTile {
+    flex-wrap: wrap;
+  }
+
+  .reminderCta {
+    margin-left: 50px;
+  }
+}

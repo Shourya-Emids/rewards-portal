@@ -1,0 +1,56 @@
+.balanceCard {
+  background: var(--gradient-yellow);
+  color: var(--color-ink);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 146px;
+}
+
+.balanceCard p {
+  color: var(--color-steel);
+  font-size: 14px;
+  line-height: 1.35;
+  margin: 0 0 8px;
+}
+
+.balanceCard strong {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  color: var(--color-heading);
+}
+
+.balanceCard button {
+  border: 0;
+  color: #fff;
+  background: var(--color-accent-strong);
+  padding: 9px 12px;
+  border-radius: 7px;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .balanceCard {
+    min-height: 110px;
+    padding: 12px 14px;
+    align-items: flex-end;
+  }
+
+  .balanceCard p {
+    font-size: 12px;
+  }
+
+  .balanceCard strong {
+    font-size: 22px;
+  }
+
+  .balanceCard button {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}

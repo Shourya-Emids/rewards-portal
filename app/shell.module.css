@@ -1,0 +1,10 @@
+.shell {
+  min-height: 100vh;
+  background: var(--color-page);
+}
+
+.topArea {
+  padding: 18px var(--page-inset) 20px;
+  background: linear-gradient(180deg, #f7e183 0%, #f1d55f 100%);
+  box-shadow: 0 8px 22px rgba(36, 52, 79, 0.08);
+}
