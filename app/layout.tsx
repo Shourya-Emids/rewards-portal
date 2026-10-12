@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 
 import { SessionProvider } from '@/components/session/session-provider'
+import { AuthGate } from '@/components/session/auth-gate'
 import { SiteHeader } from '@/components/session/site-header'
 
 import shellClasses from './shell.module.css'
@@ -46,10 +47,12 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         <SessionProvider>
-          <main className={shellClasses.shell}>
-            <SiteHeader />
-            {children}
-          </main>
+          <AuthGate>
+            <main className={shellClasses.shell}>
+              <SiteHeader />
+              {children}
+            </main>
+          </AuthGate>
         </SessionProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
