@@ -1,9 +1,9 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 import { TeamView } from '@/components/my-team/team-view'
 
 export const metadata: Metadata = {
-  title: 'My Team — Rewards Dashboard',
+  title: 'My Team — EMIDS R&R Portal',
 }
 
 export default function MyTeamPage() {

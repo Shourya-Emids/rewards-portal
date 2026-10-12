@@ -16,13 +16,19 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 12px;
-  background: var(--gradient-yellow);
-  color: var(--color-ink);
+  background: #fff;
+  border: 1px solid var(--color-divider);
   box-shadow: var(--shadow-card);
   margin-bottom: 12px;
+}
+
+.brandMark img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
 
 .inner h1 {

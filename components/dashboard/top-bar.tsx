@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { Bell, LogOut, Search, Sprout } from 'lucide-react'
+import { Bell, LogOut, Search } from 'lucide-react'
 
 import { NAV_ITEMS } from '@/lib/dashboard-data'
 import { useSession } from '@/components/session/session-provider'
@@ -25,8 +25,11 @@ export function TopBar() {
 
   return (
     <header className={classes.topBar}>
-      <div className={classes.brandMark} aria-hidden="true">
-        <Sprout size={22} strokeWidth={1.8} />
+      <div className={classes.brand}>
+        <span className={classes.brandMark}>
+          <img src="/emids-logo.png" alt="EMIDS" />
+        </span>
+        <span className={classes.brandText}>EMIDS R&amp;R Portal</span>
       </div>
       <nav aria-label="Primary navigation" className={classes.nav}>
         {visibleItems.map((item) => (

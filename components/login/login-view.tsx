@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import { Briefcase, Sprout, User, type LucideIcon } from 'lucide-react'
+import { Briefcase, User, type LucideIcon } from 'lucide-react'
 
 import { useSession, type Persona } from '@/components/session/session-provider'
 
@@ -39,10 +39,10 @@ export function LoginView() {
   return (
     <div className={classes.loginPage}>
       <div className={classes.inner}>
-        <span className={classes.brandMark} aria-hidden="true">
-          <Sprout size={20} strokeWidth={1.8} />
+        <span className={classes.brandMark}>
+          <img src="/emids-logo.png" alt="EMIDS logo" />
         </span>
-        <h1>Welcome to Rewards</h1>
+        <h1>EMIDS R&amp;R Portal</h1>
         <p className={classes.tagline}>Log in with how you work today.</p>
 
         <div className={classes.options}>

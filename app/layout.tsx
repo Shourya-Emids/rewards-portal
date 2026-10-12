@@ -9,24 +9,11 @@ import shellClasses from './shell.module.css'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Rewards Dashboard',
-  description: 'A personal rewards and progress dashboard.',
+  title: 'EMIDS R&R Portal',
+  description: 'Recognize teammates, track rewards and manage your team.',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/emids-logo.png',
+    apple: '/emids-logo.png',
   },
 }
 
